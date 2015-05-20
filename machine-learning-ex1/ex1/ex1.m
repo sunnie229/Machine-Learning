@@ -40,6 +40,7 @@ pause;
 fprintf('Plotting Data ...\n')
 data = load('ex1data1.txt');
 X = data(:, 1); y = data(:, 2);
+
 m = length(y); % number of training examples
 
 % Plot Data
@@ -48,6 +49,7 @@ plotData(X, y);
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
 
 %% =================== Part 3: Gradient descent ===================
 fprintf('Running Gradient Descent ...\n')
@@ -91,6 +93,7 @@ fprintf('Visualizing J(theta_0, theta_1) ...\n')
 
 % Grid over which we will calculate J
 theta0_vals = linspace(-10, 10, 100);
+
 theta1_vals = linspace(-1, 4, 100);
 
 % initialize J_vals to a matrix of 0's
@@ -119,4 +122,5 @@ figure;
 contour(theta0_vals, theta1_vals, J_vals, logspace(-2, 3, 20))
 xlabel('\theta_0'); ylabel('\theta_1');
 hold on;
+
 plot(theta(1), theta(2), 'rx', 'MarkerSize', 10, 'LineWidth', 2);
