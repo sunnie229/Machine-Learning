@@ -81,13 +81,15 @@ pause;
 %
 %  How does the decision boundary change when you vary lambda? How does
 %  the training set accuracy vary?
+%higher lambda == underfitting
+%lower lambda = overfitting
 %
 
 % Initialize fitting parameters
 initial_theta = zeros(size(X, 2), 1);
 
 % Set regularization parameter lambda to 1 (you should vary this)
-lambda = 1;
+lambda = 100;
 
 % Set Options
 options = optimset('GradObj', 'on', 'MaxIter', 400);
